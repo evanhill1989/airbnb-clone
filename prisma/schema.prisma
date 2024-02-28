@@ -35,6 +35,7 @@ model Home {
   country String?
   photo String?
   price Int?
+  categoryName String?
 
   addedCategory Boolean @default(false)
   addedDescription Boolean @default(false)
