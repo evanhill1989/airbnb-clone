@@ -17,7 +17,7 @@ export default function StructureRoute({ params }: { params: { id: string } }) {
         <input type="hidden" name="homeId" value={params.id} />
         <SelectCategory />
 
-        {/* <CreationBottomBar /> */}
+        <CreationBottomBar />
       </form>
     </>
   );

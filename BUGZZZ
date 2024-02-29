@@ -1,0 +1,3 @@
+drop down menu list home link does nothing:
+Finally understand that if you already have a home it doesn't work. That's why reverting to previous versions never did anything.
+So you have to have no home right now and have to have a fresh user session from kinde with a recent login/register.
