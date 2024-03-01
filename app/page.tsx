@@ -71,14 +71,14 @@ async function ShowItems({
   return (
     <>
       {data.length === 0 ? (
-        <NoItems />
+        <NoItems description="No listings found" title="No listings" />
       ) : (
         <div className="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
           {data.map((item) => {
             return (
               <ListingCard
                 key={item.id}
-                desription={item.description as string}
+                description={item.description as string}
                 imagePath={item.photo as string}
                 price={item.price as number}
                 location={item.country as string}

@@ -7,7 +7,7 @@ import { AddToFavorite, DeleteFromFavorite } from "../actions";
 
 interface iAppProps {
   imagePath: string;
-  desription: string;
+  description: string;
   location: string;
   price: number;
   userId: string | undefined;
@@ -19,7 +19,7 @@ interface iAppProps {
 
 export function ListingCard({
   imagePath,
-  desription,
+  description,
   location,
   price,
   userId,
@@ -67,7 +67,7 @@ export function ListingCard({
           {country?.flag} {country?.label} / {country?.region}
         </h3>
         <p className="text-muted-foreground text-sm line-clamp-2">
-          {desription}
+          {description}
         </p>
         <p className="text-muted-foreground pt-2">
           {" "}
