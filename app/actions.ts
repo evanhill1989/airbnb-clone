@@ -63,6 +63,8 @@ export async function createCategoryPage(formData: FormData) {
       addedCategory: true,
     },
   });
+
+  return redirect(`/create/${homeId}/description`);
 }
 
 export async function createDescription(formData: FormData) {

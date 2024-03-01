@@ -61,9 +61,9 @@ export default function DescriptionPage({
               </div>
               <div className="flex items-center justify-between">
                 <div className="flex flex-col">
-                  <h3 className="underline font-medium">Rooms</h3>
+                  <h3 className="underline font-medium">Bedrooms</h3>
                   <p className="text-muted-foreground text-sm">
-                    How many rooms do you have?
+                    How many bedrooms do you have?
                   </p>
                 </div>
                 <Counter name="room" />
