@@ -5,7 +5,6 @@ import prisma from "./lib/db";
 import { supabase } from "./lib/supabase";
 import { revalidatePath } from "next/cache";
 export async function createAirbnbHome({ userId }: { userId: string }) {
-  console.log(userId);
   const data = await prisma.home.findFirst({
     where: {
       userId: userId,
