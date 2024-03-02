@@ -12,7 +12,7 @@ const ICON = icon({
 
 export default function Map({ locationValue }: { locationValue: string }) {
   const { getCountryByValue } = useCountries();
-  const latLang = getCountryByValue(locationValue)?.latlng;
+  const latLang = getCountryByValue(locationValue)?.latLang;
   return (
     <MapContainer
       scrollWheelZoom={false}

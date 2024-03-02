@@ -1,7 +1,7 @@
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import prisma from "../lib/db";
 import { redirect } from "next/navigation";
-import NoItems from "../components/NoItems";
+import { NoItems } from "../components/NoItems";
 import { ListingCard } from "../components/ListingCard";
 import { unstable_noStore as noStore } from "next/cache";
 
