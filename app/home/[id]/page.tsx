@@ -11,8 +11,10 @@ import { divIcon } from "leaflet";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { CreateReservation } from "@/app/actions";
+import { unstable_noStore as noStore } from "next/cache";
 
 async function getData(homeid: string) {
+  noStore();
   const data = await prisma.home.findUnique({
     where: {
       id: homeid,
