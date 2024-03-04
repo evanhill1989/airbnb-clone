@@ -1,3 +1,23 @@
 drop down menu list home link does nothing:
 Finally understand that if you already have a home it doesn't work. That's why reverting to previous versions never did anything.
 So you have to have no home right now and have to have a fresh user session from kinde with a recent login/register.
+
+Switching Auth to production:
+
+# KINDE_SITE_URL=http://localhost:3000/
+
+# KINDE_POST_LOGOUT_REDIRECT_URL=http://localhost:3000/
+
+# KINDE_POST_LOGIN_REDIRECT_URL=http://localhost:3000/api/auth/creation
+
+KINDE_SITE_URL=https://airbnb-clone-triad.vercel.app/
+KINDE_POST_LOGOUT_REDIRECT_URL=https://airbnb-clone-triad.vercel.app/ # log out didn't take me here...
+KINDE_POST_LOGIN_REDIRECT_URL=https://airbnb-clone-triad.vercel.app/api/auth/creation
+
+api\auth\creation route.ts
+return NextResponse.redirect("https://airbnb-clone-triad.vercel.app/"); // this redirect result: still get the same error at this http://localhost:3000/api/auth/kinde_callback?....
+
+// return NextResponse.redirect("http://localhost:3000/"); this redirect result: State Mismatch Error
+}
+
+So it get internal server 500 and Im not logged in when i manually redirect.

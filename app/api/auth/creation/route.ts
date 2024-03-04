@@ -32,5 +32,7 @@ export async function GET() {
     });
   }
 
-  return NextResponse.redirect("http://localhost:3000");
+  return NextResponse.redirect("https://airbnb-clone-triad.vercel.app/"); //this redirect result: still get the same error at this http://localhost:3000/api/auth/kinde_callback?....
+
+  //return NextResponse.redirect("http://localhost:3000/"); this redirect result: State Mismatch Error
 }
